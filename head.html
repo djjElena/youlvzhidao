@@ -1,0 +1,195 @@
+<div class="heads">
+    <!--头部-->
+    <div class="tou">
+        <div class="inner">
+            <div class="revi-header">
+                <div class="h-lg lf">
+                    <a href="#" class="revi-logo-img"><img src="./image/logo.png"></a>
+                </div>
+                <div class="h-sou rt">
+                    <!--<h4><i></i>全国咨询热线：<span>400-616-8028</span></h4>-->
+                    <!--<form action="" method="" class="revi-search-bar">-->
+                        <!--<div class="revi-searchbar-content clearfix">-->
+                            <!--<input type="text" placeholder="请输入关键词" class="revi-search-ipt lf" />-->
+                            <!--<button class="revi-search-btn lf" type="submit">-->
+                                <!--搜索-->
+                            <!--</button>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                    <div class="dlzc">
+                        <span>微信公众号</span>
+                        <img src="image/ewm_gz.png" alt=""/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>助理微信</span>
+                        <img src="image/ewm_zl.png" alt=""/>
+                    </div>
+                    <div class="rexian rt">
+                        <h1><i class="iconfont icontouxiang"></i>&nbsp;<a href="#">登录 |</a><a href="#">注册</a></h1>
+                        <p>咨询热线: <span>400-776-8898</span></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tou-ph">
+        <div class="iconBack-title">
+            <a class="m_logo" href="#"><img src="./image/logo.png"></a>
+        </div>
+        <a class="anniu" href="#"><div class="menu2"></div></a>
+        <ul class="navlist_mo">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">专业领域</a>
+            </li>
+            <li>
+                <a href="#">专家团队</a>
+            </li>
+            <li class="mo">
+                <a href="#" class="sj">股权培训</a>
+                <ul class="abm_nav">
+                    <li>
+                        <a href="#">线上培训</a>
+                    </li>
+                    <li>
+                        <a href="#">线下培训</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mo">
+                <a href="#" class="sj">经典业绩</a>
+                <ul class="abm_nav">
+                    <li>
+                        <a href="#">近期业绩</a>
+                    </li>
+                    <li>
+                        <a href="#">往期业绩</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mo">
+                <a href="#" class="sj">关于有律</a>
+                <ul class="abm_nav">
+                    <li>
+                        <a href="#">有律介绍</a>
+                    </li>
+                    <li>
+                        <a href="#">新闻报道</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mo">
+                <a href="#" class="sj">联系我们</a>
+                <ul class="abm_nav">
+                    <li>
+                        <a href="#">联系方式</a>
+                    </li>
+                    <li>
+                        <a href="#">加入我们</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="h-nav">
+        <div class="inner">
+            <!--导航-->
+            <div class="h-list">
+                <ul>
+                    <li class="active"><a href="#">首页</a>  </li>
+                    <li><a href="#">专业领域</a></li>
+                    <li><a href="#">专家团队</a></li>
+                    <li>
+                        <a href="#">股权培训</a>
+                        <div class="xl-s">
+                            <ul class="xl-list">
+                                <li>
+                                    <a href="#">线上培训</a>
+                                </li>
+                                <li>
+                                    <a href="#">线下培训</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">经典业绩</a>
+                        <div class="xl-s">
+                            <ul class="xl-list">
+                                <li>
+                                    <a href="#">近期业绩</a>
+                                </li>
+                                <li>
+                                    <a href="#">往期业绩</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">关于有律</a>
+                        <div class="xl-s">
+                            <ul class="xl-list">
+                                <li>
+                                    <a href="#">有律简介</a>
+                                </li>
+                                <li>
+                                    <a href="#">新闻报道</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="javascript:;">联系我们</a>
+                        <div class="xl-s">
+                            <ul class="xl-list">
+                                <li>
+                                    <a href="#">联系方式</a>
+                                </li>
+                                <li>
+                                    <a href="#">加入我们</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="sousuo">
+                        <input type="text" class="search"/>
+                        <b></b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            /*导航下拉效果*/
+            $('.h-list ul>li').on('mouseenter',function(){
+                $(this).children('div').slideDown(200);
+            }).on('mouseleave',function(){
+                $(this).children('div').slideUp(200);
+            });
+            //点击切换导航栏按钮  手机端
+            $('.tou-ph').on('click','.anniu',function(){
+                if($(this).attr('class')!='anniu active'){
+                    $(this).addClass('active');
+                    $('body').css('right','50%');
+                    $('.navlist_mo').css('right','0');
+                }else{
+                    $(this).removeClass('active');
+                    $('body').css('right','0');
+                    $('.navlist_mo').css('right','-50%');
+                }
+            });
+            //侧边栏点击切换效果  手机端
+            $('.navlist_mo').on('click','.mo>a',function(){
+                if($(this).parent().attr('class')!='mo active'){
+                    $(this).parent().addClass('active');
+                    $(this).parent().siblings().removeClass('active');
+                }else{
+                    $(this).parent().removeClass('active');
+                }
+            });
+
+        })
+    </script>
+</div>
