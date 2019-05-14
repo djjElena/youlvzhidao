@@ -336,6 +336,92 @@
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
+                    <!--手机端专家团队-->
+                    <div class="swiper-container wow bounceIn animated" id="zjtd-ph">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div>
+                                    <a href="#">
+                                        <img src="image/lvshi_03.jpg" alt=""/>
+                                        <div class="xm">
+                                            <h1>王英军律师</h1>
+                                            <h2>有律创始人、著名股权律师</h2>
+                                        </div>
+                                        <div class="lsjieshao">
+                                            有律创始人，全国著名股权律师，北大法律硕士，喜马拉雅FM全国排名第一节目
+                                            的股权法律节目主讲人，北大一八九八咖啡馆联合创始人。
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div>
+                                    <a href="#">
+                                        <img src="image/lvshi_05.jpg" alt=""/>
+                                        <div class="xm">
+                                            <h1>李强律师</h1>
+                                            <h2>有律公司法合伙人</h2>
+                                        </div>
+                                        <div class="lsjieshao">
+                                            有律创始人，全国著名股权律师，北大法律硕士，喜马拉雅FM全国排名第一节目
+                                            的股权法律节目主讲人，北大一八九八咖啡馆联合创始人。
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <a href="#">
+                                        <img src="image/lvshi_07.jpg" alt=""/>
+                                        <div class="xm">
+                                            <h1>李青山律师</h1>
+                                            <h2>有律公司法合伙人</h2>
+                                        </div>
+                                        <div class="lsjieshao">
+                                            有律创始人，全国著名股权律师，北大法律硕士，喜马拉雅FM全国排名第一节目
+                                            的股权法律节目主讲人，北大一八九八咖啡馆联合创始人。
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <a href="#">
+                                        <img src="image/lvshi_09.jpg" alt=""/>
+                                        <div class="xm">
+                                            <h1>赵光耀律师</h1>
+                                            <h2>有律公司法合伙人</h2>
+                                        </div>
+                                        <div class="lsjieshao">
+                                            有律创始人，全国著名股权律师，北大法律硕士，喜马拉雅FM全国排名第一节目
+                                            的股权法律节目主讲人，北大一八九八咖啡馆联合创始人。
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <a href="#">
+                                        <img src="image/lvshi_11.jpg" alt=""/>
+                                        <div class="xm">
+                                            <h1>牟晋军律师</h1>
+                                            <h2>有律公司法合伙人</h2>
+                                        </div>
+                                        <div class="lsjieshao">
+                                            有律创始人，全国著名股权律师，北大法律硕士，喜马拉雅FM全国排名第一节目
+                                            的股权法律节目主讲人，北大一八九八咖啡馆联合创始人。
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 如果需要分页器 -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+
                     <a href="#" class="more">查看更多></a>
                 </div>
             </div>
@@ -547,6 +633,21 @@
                 nextButton:'.swiper-button-next',
                 paginationClickable: true
             });
+            var zjtdph = new Swiper('#zjtd-ph', {
+//                autoplay: 4000,
+                simulateTouch : true,
+                speed:1000,
+                //effect : "fade",
+                fade: {
+                    crossFade: true
+                },
+                loop: true,
+                lazyLoading: true,
+                pagination: '.swiper-pagination',
+//                prevButton:'.swiper-button-prev',
+//                nextButton:'.swiper-button-next',
+                paginationClickable: true
+            });
             /**/
             /*首页浮动效果函数*/
             function fdxg(div,offset,time){
@@ -562,11 +663,11 @@
                 }
             }
             $(window).on("scroll",function(){
-                fdxg('.hxyw h1',100,0);
-                fdxg('.zjtd h1',100,0);
-                fdxg('.yldt h1',100,0);
-                fdxg('.jdyj h1',100,0);
-                fdxg('.hzhb h1',100,0);
+                fdxg('.hxyw .h-title h1',100,0);
+                fdxg('.zjtd .h-title h1',100,0);
+                fdxg('.yldt .h-title h1',100,0);
+                fdxg('.jdyj .h-title h1',100,0);
+                fdxg('.hzhb .h-title h1',100,0);
                 fdxg('.mc h1',100,0);
                 fdxg('.cn_in',100,0);
                 fdxg('.cn_txt',100,0);

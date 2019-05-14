@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>联系我们</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1184785_ca70zvq62e.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/second.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <!-- 百度地图 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nxW0akynjKF8Ag0G0uVVwq0t6ak1Q1Zj"></script>
+</head>
+<body>
+<!--头部-->
+<div class="heads">
+    <script>
+        $(".heads").load("head.html");
+    </script>
+</div>
+<!--banner-->
+<div class="erjiimg">
+    <img src="image/lxwm.jpg" alt=""/>
+</div>
+<!--内容-->
+<div>
+    <div class="inner">
+        <!-- 介绍-->
+        <div class="jieshao">
+            <div class="lxwm-left">
+                <!-- 标题-->
+                <span>联系我们</span>
+                <p>友好的沟通是项目成功的基础，彼此的相互了解与彼此信任都是必要的，我们随时欢迎您的沟通与来访！</p>
+
+                <ul>
+                    <li>
+                        <i class="iconfont icondizhi"></i>地址：北京市海淀区学清嘉创大厦A座1108-1111
+                    </li>
+                    <li>
+                        <i class="iconfont icondianhua-copy"></i>联系电话：400-776-8898
+                    </li>
+                    <li>
+                        <i class="iconfont iconyoujian"></i>邮件：service@youlaw.cn
+                    </li>
+                </ul>
+            </div>
+            <div class="lxwm-right">
+                <!-- 标题-->
+                <span>问题留言</span> <br/>
+                <p>如果您有项目合作的意向或相关行业内问题，欢迎您给我们留言，我们会在第一时间回复沟通！</p>
+                <ul>
+                    <li>
+                        <input type="text"  placeholder="姓名"/>
+                        <input type="text"  placeholder="联系方式"/>
+                    </li>
+                    <li>
+                        <textarea name="" id="" cols="30" rows="5" style="width:100%" placeholder="问题概述"></textarea>
+                    </li>
+                    <li>
+                        <button>提交</button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- 百度地图-->
+        <div style="border:#ccc solid 1px;font-size:12px" id="map"></div>
+    </div>
+</div>
+<!--底部-->
+<div class="foots">
+    <script>
+        $(".foots").load("foot.html");
+    </script>
+</div>
+<script>
+    /*百度地图*/
+    $(function(){
+        var map = new BMap.Map("map");
+        var point = new BMap.Point(116.359412,40.020242);
+        map.centerAndZoom(point, 18);                 // 初始化地图，设置中心点坐标和地图级别
+        //添加导航控件
+        map.addControl(new BMap.NavigationControl());
+        //添加缩放控件
+        map.addControl(new BMap.ScaleControl());
+        //添加概览图
+        map.addControl(new BMap.OverviewMapControl());
+        //添加地图类型控件
+        map.addControl(new BMap.MapTypeControl());
+        var marker = new BMap.Marker(point);
+        //默认动画
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+        //创建标注
+        map.addOverlay(marker);         //将标注添加到地图中
+        map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+        //信息提示的窗口
+        var opts = {
+            width : 100,     // 信息窗口宽度
+            height: 40,     // 信息窗口高度
+            title : "有律知道" , // 信息窗口标题
+            enableMessage:true//设置允许信息窗发送短息
+        };
+        var infoWindow = new BMap.InfoWindow("地址：北京市海淀区学清嘉创大厦A座1108-1111", opts);  // 创建信息窗口对象
+        map.openInfoWindow(infoWindow,point); //开启信息窗口
+        marker.addEventListener("click", function(){
+            map.openInfoWindow(infoWindow,point); //开启信息窗口
+        });
+    })
+</script>
+</body>
+</html>
